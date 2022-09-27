@@ -10,7 +10,7 @@ binarySearch(arr,x,low,high):
                 else                // x is on the left side 
                     high = mid - 1
     """
-
+"""
 def binarySearch(arr,x,N,low,high): 
     while low<=high:        
         mid = (low+high)//2
@@ -33,5 +33,33 @@ if __name__=="__main__":
     
     if(ans!=-1):
         print("Element ",x ," found at ", ans , " index ")
+    else:
+        print("Not Found ")
+        """
+# 2 . Recursive solution 
+
+def binarySearch(arr,x,low,high): 
+    
+    if low<=high:        
+        mid = low+(high-low)//2
+        if(arr[mid]==x):
+            return mid
+        elif(arr[mid]>x):
+            return binarySearch(arr , x ,low, mid-1)
+        else:
+            return binarySearch(arr , x  ,mid+1 ,high)
+    else:
+        return - 1
+    
+if __name__=="__main__":
+    arr = [1,9,3,4,2,8]
+    x = 9
+    # arr.sort()
+    low = 0
+    high = len(arr)-1
+    ans = binarySearch(arr,x,low,high)
+    
+    if(ans!=-1):
+        print("Element ", x ," found at ", ans , " index ")
     else:
         print("Not Found ")
