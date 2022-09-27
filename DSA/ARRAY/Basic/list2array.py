@@ -1,7 +1,5 @@
 
-
 from array import array
-
 
 num_list = [1,2,3]
 array_num = array('i',[])

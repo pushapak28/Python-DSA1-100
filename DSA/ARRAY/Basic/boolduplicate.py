@@ -6,3 +6,4 @@ def test_duplicate(arr):
 
 print(test_duplicate([1,2,3,1,2]))
 print(test_duplicate([1,2,3,4]))
+
